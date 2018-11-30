@@ -1,0 +1,48 @@
+Ls:用于显示指定目录下的内容	ls 【-option】 文件名	a"显示所有文件和目录，包含隐藏文件和目录"l"显示文件和目录的完整属性信息"d。
+Cd:改变当前路径cd【相对路径或绝对路径】。
+pwd	:显示当前所在的目录pwd。
+mkdir:创建目录	mkdir 【-option】 目录名称p父目录不存在时，同时建立。
+rmdir:用于删除目录（目录必须为空），rmdir 目录名称。
+vi：用于文本文件编辑。
+Ln：创建链接ln 【-option】 源文件 目标文件s创建硬链接。
+cp：复制文件或目录，cp命令可以将单个文件复制到一个具体的文件名或一个已经存在的目录下，也可以复制多个文件到一个指定的目录中（此时要求目标文件参数必须是一个已经存在的目录名）。
+Mv："剪切移动文件或目录（常对文件或目录进行改名）"mv 源文件 目标文件。
+Rm：删除文件rm 【-option】 文件名r循环删除（常用于删除目录）	f强制删除。
+cat：显示文件内容cat【-option】 文件名	n	连行号一起显示	b	"连行号一起显示，但空行不算"。
+More："分页显示文件内容（回车单行下翻。
+ctrl+f：整页下翻，退出按q键"	more【-option】 文件名。
+Head：显示文件头几行内容	head【-option】 文件名	n	指定显示多少行。
+Tail：显示文件尾几行内容	tail【-option】 文件名	n	指定显示多少行。
+Cut：截取文件内容，cut【-option】文件名d，后面跟分隔用的字符，否则默认tabf跟数字，表示指定第几个区。
+Find：查找文件或目录，并可对查找到的文件执行指定的操作。Find命令查找是从指定目录向下递归搜索各个子目录，找到满足查找条件的文件后将其显示在标准输出中，并对其进行指定的操作。find【path】【-option】 文件名，name后面跟寻找文件名type。
+which：查找可执行文件的位置	which 文件名。
+Whereis：对目录进行查询	whereis 【-option】文件名，和which区别 ：它不使用PATH环境变量。
+grep	:"文本搜索工具，把匹配的行打印出来"，grep【-option】文件名，i忽略大小写，v打印不符合要求的行，c打印符合要求的行，n连同行号一起输出。
+Useradd：创建用户账号useradd 【-option】用户名，【-p】设置用户的密码，【-G】指定用户所属的附加群组,【-s<shell>】指定用户登录后所使用的shell。
+passwd：设定用户密码passwd 【username】。
+Su：切换用户身份	su 【-】 【username】，“-”完整切换到另一个用户的环境，不加“-”表示使用当前环境。
+groups：用于显示用户所属的群组信息	groups 【username】。
+id：显示用户的UID，GID以及所拥有的群组	id 【username】。
+chown：用于变更文件及目录的所有者和所属组，"chown【-option】user：group 目录或文件名称"，使用该命令的参数“-R”可以批量修改目录下的文件的所有者和组信息。
+Chmod：用于变更文件或目录的读写执行权限	，Linux系统提供了字符方式和八进制方式改变文件的访问权限。"chmod【-option】【parameter】目录或文件名称"，使用该命令的参数“-R”进行递归操作，chmod命令将忽略所遇到的符号链接。
+rpm	一种安装包rpm【-option】rpm包名或者套件名ivh安装rpm包qa卸载enodeps	强制卸载。
+yum	搜寻rpm包	yum【-option】【command】	install	重新安装指定的已安装的包	list	显示存在的所有的rpm包	groupinstall	info。
+zip："一个或多个文件压缩为一个压缩包后缀.zip"， zip 压缩名 文件列表	xi。
+bzip2：压缩工具，压缩后的后缀名为“.bz2”，bzip2 [-option] 文件名，使用参数“-d”解压被压缩的文件。
+gzip	：压缩工具，压缩后的后缀名为“.gz”，gzip [-option] 文件名，使用参数“-d”解压被压缩的文件。
+tar	打包工具	tar【-option】打包名 需要打包的文件	xvf	解开一个包，打包过程中显示被打包的文件，后跟需要打包的文件	cvf	"建立一个包，打包过程中显示被打包的文件，后跟需要打包的文件"	z	j	同时启用压缩或解压。
+ps：	显示进程，ef	显示所有进程。
+Kill：杀进程	kill【-option】PID或者任务号	9	强制杀掉进程或任务
+df：显示磁盘的空间使用情况	df【-option】。
+du："显示指定目录下所有文件及子目录，所占用磁盘空间大小"	du【-option】【目录名称】。
+fdisk	：磁盘分割，显示或进行分区	fdisk[-option][设备名称]
+free	：查看内存使用情况	free 【-option】	_t	显示总计	_m	用Mbyte做单位。
+ifconfig：显示或设置网卡。
+ifdown：禁用网卡设备。
+ifup：启用网卡设备。
+Ping：测试目标与本机的连接情况	ping 【-option】目标	_c 数字	指定测试多少次
+Service：用于执行服务脚本	service 服务脚本名、脚本参数，start	启用服务器，stop	结束该服务器，restart重启服务器	，status显示该服务器状态。
+Setenforce：设置selinux的状态setenforce number	0关闭selinux	1开启selinux。
+Getenforce：显示selinux的状态enforcing启用中	permissive	表示关闭。
+Mount：用于挂载存储设备	mount【-option】文件名c打印符合要求的行数i忽略大小写n	连同行号一起输出v打印不符合要求的行。
+
